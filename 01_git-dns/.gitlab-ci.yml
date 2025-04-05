@@ -1,0 +1,32 @@
+stages:
+  - test
+  - build
+
+test_job:
+  stage: test
+  tags:
+    - dns
+  artifacts:
+    paths:
+      - config/
+  before_script:
+    - cd config
+  script:
+    - dnscontrol check
+    
+build_job:
+  stage: build
+  tags:
+    - dns
+  artifacts:
+    paths:
+      - config/
+  before_script:
+    - cd config
+    - mkdir zones
+    - cp /etc/coredns/origins/* zones/
+  script:
+    - dnscontrol push
+  after_script:
+    - cd config/
+    - cp zones/*.zone /etc/coredns/origins/
