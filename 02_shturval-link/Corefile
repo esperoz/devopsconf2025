@@ -1,0 +1,15 @@
+shturval.link:53 {
+	ready
+	template IN A shturval.link {
+		    match ^\S+[.]ip-(?P<a>[0-9]*)-(?P<b>[0-9]*)-(?P<c>[0-9]*)-(?P<d>[0-9]*)[.]shturval[.]link[.]$
+			answer "{{ .Name }} 3600 IN A {{ .Group.a }}.{{ .Group.b }}.{{ .Group.c }}.{{ .Group.d }}"
+			fallthrough
+	  }
+	rewrite stop type AAAA A
+	rewrite stop type MX A
+	rewrite stop type HTTPS A
+	file /etc/coredns/shturval.link.zone
+	cache 3600
+	reload
+	prometheus localhost:9253
+}

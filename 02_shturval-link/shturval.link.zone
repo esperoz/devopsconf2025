@@ -1,0 +1,11 @@
+$TTL 300
+$ORIGIN shturval.link.
+@       IN      SOA     ns1.shturval.link. alex.shturval.tech. (
+    2023032100   ; Serial
+    604800       ; Refresh
+    86400        ; Retry
+    2419200      ; Expire
+    3600 )       ; Negative Cache TTL
+                 IN A    77.95.135.109
+ns1              IN A    77.95.135.109
+
