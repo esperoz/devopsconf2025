@@ -3,12 +3,14 @@
 
 [Страница доклада](https://devopsconf.io/moscow/2025/abstracts/14190)
 
+Задать вопросы можно в чате [Штурвал: Kubernetes-сообщество](https://t.me/shturval_community)
+
 ## Управление DNS из git
 
 [Подробнее](./01_git-dns/README.md)
 
 ## Свой NoIP DNS-сервис
-Предоставление DNS на основе шаблонов. Ответ есть уже в самом запросе
+DNS на основе шаблонов. Ответ есть уже в самом запросе
 
 [Подробнее](./02_shturval-link/README.md)
 
