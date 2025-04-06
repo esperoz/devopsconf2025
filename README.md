@@ -1,4 +1,4 @@
-# devopsconf2025
+# DevOps Conf 2025
 Материалы к докладу "Как я перестал страдать и полюбил CoreDNS" 
 
 [Страница доклада](https://devopsconf.io/moscow/2025/abstracts/14190)
